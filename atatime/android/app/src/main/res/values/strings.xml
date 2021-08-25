@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">atatime</string>
+    <string name="facebook_app_id">1086554985137667</string>
+    <string name="fb_login_protocol_scheme">fb1086554985137667</string>
+</resources>

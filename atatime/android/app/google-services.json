@@ -1,0 +1,40 @@
+{
+    "project_info": {
+        "project_number": "969413315010",
+        "firebase_url": "https://atatime-6cf3a.firebaseio.com",
+        "project_id": "atatime-6cf3a",
+        "storage_bucket": "atatime-6cf3a.appspot.com"
+    },
+    "client": [
+        {
+        "client_info": {
+            "mobilesdk_app_id": "1:969413315010:android:daa53a952677886e73ae5b",
+            "android_client_info": {
+            "package_name": "com.atatime"
+            }
+        },
+        "oauth_client": [
+            {
+            "client_id": "969413315010-unqdicsao8ev6ll1p1l5sqbgskec68ui.apps.googleusercontent.com",
+            "client_type": 3
+            }
+        ],
+        "api_key": [
+            {
+            "current_key": "AIzaSyCrGtOZWCWmYWGOQUduMeJjqem544WpVBE"
+            }
+        ],
+        "services": {
+            "appinvite_service": {
+            "other_platform_oauth_client": [
+                {
+                "client_id": "969413315010-unqdicsao8ev6ll1p1l5sqbgskec68ui.apps.googleusercontent.com",
+                "client_type": 3
+                }
+            ]
+            }
+        }
+        }
+    ],
+    "configuration_version": "1"
+}
