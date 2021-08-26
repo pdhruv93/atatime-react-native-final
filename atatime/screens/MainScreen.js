@@ -3,6 +3,7 @@ import {Text, View, Linking} from 'react-native';
 import { Button, TextInput  } from 'react-native-paper';
 import FBLoginButton from '../components/FBLoginButton';
 import ActivitiesList from '../components/ActivitiesList';
+import ActivityViewer from '../components/ActivityViewer';
 import {styles} from '../components/StyleSheet';
 import {UserContext} from '../App';
 import database from '@react-native-firebase/database';
@@ -37,6 +38,7 @@ export default MainScreen = (props)=> {
 
             <View style={[styles.screen, styles.blueBackground]}>
                 <Text>{"\n"}</Text> 
+                <ActivityViewer/>
                 <Button color="white" mode="contained" style={styles.scrollButton} onPress={()=>{props.scrollRef.current?.scrollTo({x: 0, y: 0})}} >
                     Cool!! Tag More Activities
                 </Button>

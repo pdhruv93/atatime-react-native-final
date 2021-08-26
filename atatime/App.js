@@ -1,10 +1,10 @@
-import React,{useState, createContext} from 'react';
+import React,{useState, createContext, useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import SplashScreen from './screens/SplashScreen';
 import LoginScreen from './screens/LoginScreen';
 import MainScreenWrapper from './screens/MainScreenWrapper';
+import messaging from '@react-native-firebase/messaging';
 
 export const UserContext = createContext();
 
@@ -14,6 +14,15 @@ export default App = () => {
   const Stack = createStackNavigator();
 
   const [userDetails, setUserDetails] = useState({userId:"", fNameLName:"", profilePicURL:"", deviceId:"", userName:""});
+
+
+  useEffect(()=>{
+      console.log("Registering App for recieving background push notifications from Firebase!!");
+      messaging().setBackgroundMessageHandler(async remoteMessage => {
+      console.log('Message handled in the background!', remoteMessage);
+  });
+  }, [])
+
 
   return (
     <NavigationContainer>
