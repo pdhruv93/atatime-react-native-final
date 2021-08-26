@@ -3,6 +3,7 @@ import {ScrollView, StatusBar, Text, View} from 'react-native';
 
 import {styles} from '../components/StyleSheet';
 import Header from '../components/Header';
+import MainScreen from './MainScreen';
 
 import {UserContext} from '../App';
 
@@ -16,6 +17,7 @@ export default MainScreenWrapper = (props) => {
         <ScrollView ref={scrollRef} stickyHeaderIndices={[1]}>
             <StatusBar barStyle="dark-content" />
             <Header scrollRef={scrollRef} />
+            <MainScreen scrollRef={scrollRef}/>
         </ScrollView>
     )
 
