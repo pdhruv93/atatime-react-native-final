@@ -1,8 +1,7 @@
 import React, {useState, useContext, useEffect}  from 'react';
 import {Text} from 'react-native';
-
 import {getUsersCurrentLocation, createNewEntryInUserActivityTable, fetchAllUsersWithSameActivity, sendPushNotification} from './UtilityFunctions';
-import {UserContext} from '../App';
+import {UserContext} from '../screens/MainScreenWrapper';
 import {ActivityContext} from '../screens/MainScreen';
 import UserList from './UserList'
 import {styles} from './StyleSheet';

@@ -5,7 +5,7 @@ import FBLoginButton from '../components/FBLoginButton';
 import ActivitiesList from '../components/ActivitiesList';
 import ActivityViewer from '../components/ActivityViewer';
 import {styles} from '../components/StyleSheet';
-import {UserContext} from '../App';
+import {UserContext} from './MainScreenWrapper';
 import database from '@react-native-firebase/database';
 
 

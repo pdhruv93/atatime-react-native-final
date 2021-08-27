@@ -1,11 +1,8 @@
-import React, {useContext}  from 'react';
+import React from 'react';
 import {LoginButton, AccessToken, GraphRequest, GraphRequestManager} from 'react-native-fbsdk';
 import database from '@react-native-firebase/database';
-import {UserContext} from '../App';
 
 export default FBLoginButton = (props) => {
-
-    const {userDetails, setUserDetails}=useContext(UserContext);
 
     return(
         <LoginButton 
@@ -44,7 +41,6 @@ export default FBLoginButton = (props) => {
                                         .set(user)
                                         .then(() =>{
                                             console.log('User Table Updated at Firebase Side...Now redirecting to MainScreenWrapper!!')
-                                            setUserDetails(user);
                                             props.navigation.replace('MainScreenWrapper');
                                         });  
                                     }

@@ -3,7 +3,6 @@ import { PermissionsAndroid } from 'react-native';
 import GetLocation from 'react-native-get-location';
 import axios from 'axios';
 import database from '@react-native-firebase/database';
-import messaging from '@react-native-firebase/messaging';
 
 export const getUsersCurrentLocation=async ()=>{
 	var usersLocation="";

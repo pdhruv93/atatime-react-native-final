@@ -1,8 +1,8 @@
 import React, {useContext}  from 'react';
 import {View, Text, ScrollView, Dimensions} from 'react-native';
-import { Avatar, Button, IconButton, Colors } from 'react-native-paper';
+import { Avatar, Button} from 'react-native-paper';
 import {styles} from './StyleSheet';
-import {UserContext} from '../App';
+import {UserContext} from '../screens/MainScreenWrapper';
 
 export default UserList = (props) => {
     var usersPerformingSameActivity=props.usersPerformingSameActivity;

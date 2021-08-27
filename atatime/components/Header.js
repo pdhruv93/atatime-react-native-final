@@ -1,8 +1,7 @@
 import React, {useContext} from 'react';
 import {Dimensions, TouchableHighlight} from 'react-native';
 import { Appbar, Avatar} from 'react-native-paper';
-
-import {UserContext} from '../App';
+import {UserContext} from '../screens/MainScreenWrapper';
 import {styles} from '../components/StyleSheet';
 
 
