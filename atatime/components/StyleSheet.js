@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
       backgroundColor: '#F05F40',
       width: Dimensions.get('window').width - 80,
       margin: 10,
-      height: 300,
+      height: 250,
       borderRadius: 10,
       opacity: 0.9,
       shadowColor: '#000',

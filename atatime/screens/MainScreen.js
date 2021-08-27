@@ -38,7 +38,7 @@ export default MainScreen = (props)=> {
 
             <View style={[styles.screen, styles.blueBackground]}>
                 <Text>{"\n"}</Text> 
-                <ActivityViewer/>
+                <ActivityViewer scrollRef={props.scrollRef}/>
                 <Button color="white" mode="contained" style={styles.scrollButton} onPress={()=>{props.scrollRef.current?.scrollTo({x: 0, y: 0})}} >
                     Cool!! Tag More Activities
                 </Button>

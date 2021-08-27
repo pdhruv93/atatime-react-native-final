@@ -2,6 +2,7 @@ import * as React from 'react';
 import { PermissionsAndroid } from 'react-native';
 import GetLocation from 'react-native-get-location';
 import axios from 'axios';
+import database from '@react-native-firebase/database';
 
 export const getUsersCurrentLocation=async ()=>{
 	var usersLocation="";
@@ -37,6 +38,32 @@ export const getUsersCurrentLocation=async ()=>{
 }
 
 
-export const createNewEntryInUserActivityTable=async (acitivityName, userId, userLocation)=>{
-	
+export const createNewEntryInUserActivityTable=async (acitivityName, userDetails, userLocation)=>{
+	console.log("Inside createNewEntryInUserActivityTable():"+acitivityName+":"+userDetails.userId+":"+userLocation);
+	console.log("Adding new entry...");
+	await database().ref("/userActivities/"+acitivityName+"/"+userDetails.userId)
+	.set({
+		fNameLName: userDetails.fNameLName, 
+		profilePicURL: userDetails.profilePicURL, 
+		deviceId: userDetails.deviceId, 
+		userName: userDetails.userName,
+		location : userLocation,
+		startTime: new Date().toString()
+	})
+	.then(() =>{
+		console.log("Successfully added new entry for user in Firebase DB!!");
+	})
+}
+
+
+export const fetchAllUsersWithSameActivity =async (acitivityName)=>{
+	var usersPerformingSameActivity=null;
+	console.log("Fetching all users who are performing same activity:"+acitivityName);
+	await database().ref('/userActivities/'+acitivityName)
+	.once('value', (snapshot) => {
+		usersPerformingSameActivity = snapshot.val();
+		console.log("Successfully Fecthed all users who are performing same activity !!");
+		//console.log("Users who are performing same activity:"+JSON.stringify(data));
+	});
+	return usersPerformingSameActivity;
 }
