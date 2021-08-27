@@ -54,11 +54,11 @@ export default LoginScreen = (props) => {
                     // Start the graph request(sync call).
                     new GraphRequestManager().addRequest(processRequest).start();
                 }
-                else
-                {
-                    props.navigation.replace('MainScreenWrapper');
-                }
             });
+        }
+        else
+        {
+            props.navigation.replace('MainScreenWrapper');
         }
     } , 1000);
 

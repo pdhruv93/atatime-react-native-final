@@ -35,7 +35,7 @@ export default MainScreenWrapper = (props) => {
         <ScrollView ref={scrollRef} stickyHeaderIndices={[1]}>
             <StatusBar barStyle="dark-content" />
             <Header scrollRef={scrollRef} />
-            <MainScreen scrollRef={scrollRef}/>
+            <MainScreen navigation={props.navigation} scrollRef={scrollRef}/>
         </ScrollView>
     )
 

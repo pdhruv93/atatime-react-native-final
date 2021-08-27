@@ -100,7 +100,7 @@ export const sendPushNotification =async (acitivityName, currentUserDetails, all
 			}
 		})
 		.then(res => {
-			console.log("Successfully Sent Notifications to IDs:"+JSON.stringify(deviceIds));
+			console.log("Successfully Sent Notifications to "+deviceIds.length+" DeviceIDs");
 		})
 		.catch((error) => {
 			console.log("Some error while sending notifications to devices");
