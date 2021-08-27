@@ -13,3 +13,6 @@ npm i firebase @react-native-firebase/app @react-native-firebase/database @react
 
 5. Firebase Realtime DB Usage:
 https://rnfirebase.io/database/usage
+
+6. Firebase Send push Notification:
+https://www.inkoop.io/blog/how-to-send-push-notifications-to-specific-devices-in-react-native-using-firebase/

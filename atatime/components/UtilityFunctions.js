@@ -3,6 +3,7 @@ import { PermissionsAndroid } from 'react-native';
 import GetLocation from 'react-native-get-location';
 import axios from 'axios';
 import database from '@react-native-firebase/database';
+import messaging from '@react-native-firebase/messaging';
 
 export const getUsersCurrentLocation=async ()=>{
 	var usersLocation="";
@@ -66,4 +67,49 @@ export const fetchAllUsersWithSameActivity =async (acitivityName)=>{
 		//console.log("Users who are performing same activity:"+JSON.stringify(data));
 	});
 	return usersPerformingSameActivity;
+}
+
+
+export const sendPushNotification =async (acitivityName, currentUserDetails, allUsersPerformingSameActivity)=>{
+
+	console.log("Inside sendPushNotification(). Preparing list of deviceIds to which notification will be sent!!");
+	let deviceIds=[];
+	Object.keys(allUsersPerformingSameActivity).map(key => {
+		if(key!=currentUserDetails.userId)
+			deviceIds.push(allUsersPerformingSameActivity[key].deviceId);
+	})
+
+	if(deviceIds.length>0)
+	{
+		axios.post('https://fcm.googleapis.com/fcm/send',{
+			"registration_ids": deviceIds,
+			"notification": {
+				"title": "@@time",
+				"body": "There is another user with activity "+acitivityName+". Tap to check!!",
+				"icon": "ic_notification",
+				"vibrate": 1,
+				"sound": 1,
+				"priority": "high"
+			}
+		},
+		{
+			headers: 
+			{
+				'Content-Type': 'application/json',
+				'Authorization' : 'key=AAAA4bWJScI:APA91bEXP3eOGFuC8XHCTql__GJfxZbC-ashdUoMIrKlgg0ahu9jt-ILfkyLnjDioCBFwhe1jZQrneHj0rhSzdyW08ZAhcNokae2G5mEDh5bsCqm5TzfMTZik2w6cDYpHXzDLQmKO65g'
+			}
+		})
+		.then(res => {
+			console.log("Successfully Sent Notifications to IDs:"+JSON.stringify(deviceIds));
+		})
+		.catch((error) => {
+			console.log("Some error while sending notifications to devices");
+			console.error(error);
+		})
+	}
+	else
+	{
+		console.log("No DeviceIds to send notifications!!");
+	}
+	
 }

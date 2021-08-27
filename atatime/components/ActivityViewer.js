@@ -1,7 +1,7 @@
 import React, {useState, useContext, useEffect}  from 'react';
 import {Text} from 'react-native';
 
-import {getUsersCurrentLocation, createNewEntryInUserActivityTable, fetchAllUsersWithSameActivity} from './UtilityFunctions';
+import {getUsersCurrentLocation, createNewEntryInUserActivityTable, fetchAllUsersWithSameActivity, sendPushNotification} from './UtilityFunctions';
 import {UserContext} from '../App';
 import {ActivityContext} from '../screens/MainScreen';
 import UserList from './UserList'
@@ -30,6 +30,7 @@ export default ActivityViewer = (props) => {
                     fetchAllUsersWithSameActivity(selectedActivity)
                     .then(usersPerformingSameActivity => {
                         setUsersPerformingSameActivity(usersPerformingSameActivity);
+                        sendPushNotification(selectedActivity, userDetails, usersPerformingSameActivity);
                     })
                 })
             })
