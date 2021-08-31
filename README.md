@@ -2,10 +2,10 @@
 <img src="screenshots/1.png" width="350">
 <img src="screenshots/2.png" width="350">
 
-<h2>Main Login</h2>
+<h2>Main Screen</h2>
 <img src="screenshots/3.png" width="350">
 
-<h2>Activity List Login</h2>
+<h2>Activity List</h2>
 <img src="screenshots/4.png" width="350">
 
 <h2>List of people performing same activity at that time</h2>
