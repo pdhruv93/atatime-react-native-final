@@ -1,6 +1,6 @@
 <h2>Facebook Login</h2>
-<img src="screenshots/1.png" />
-<img src="screenshots/2.png" />
+<img src="screenshots/1.png"></img>
+<img src="screenshots/2.png"></img>
 
 Start Metro server
 =============================
