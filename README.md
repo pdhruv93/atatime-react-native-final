@@ -7,6 +7,8 @@
 
 <h2>List of people performing same activity at that time</h2>
 <img src="screenshots/4.png" width="350">
+
+<h2>Chat on Messenger with those people</h2>
 <img src="screenshots/5.png" width="350">
 
 Start Metro server
