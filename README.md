@@ -1,6 +1,16 @@
 <h2>Facebook Login</h2>
-<img src="screenshots/1.png"></img>
-<img src="screenshots/2.png"></img>
+<img style="width: 16em;" src="screenshots/1.png"></img>
+<img style="width: 16em;" src="screenshots/2.png"></img>
+
+<h2>Main Login</h2>
+<img style="width: 16em;" src="screenshots/3.png"></img>
+
+<h2>Activity List Login</h2>
+<img style="width: 16em;" src="screenshots/4.png"></img>
+
+<h2>List of people performing same activity at that time</h2>
+<img style="width: 16em;" src="screenshots/5.png"></img>
+<img style="width: 16em;" src="screenshots/6.png"></img>
 
 Start Metro server
 =============================
