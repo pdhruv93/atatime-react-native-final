@@ -1,5 +1,5 @@
 <h2>Facebook Login</h2>
-<img style="width: 16em;" src="screenshots/1.png"></img>
+<img style="width: 16em !important;" src="screenshots/1.png"></img>
 <img style="width: 16em;" src="screenshots/2.png"></img>
 
 <h2>Main Login</h2>
